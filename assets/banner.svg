@@ -1,0 +1,80 @@
+<svg viewBox="0 0 1200 360" width="1200" height="360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdfdf7"/>
+      <stop offset="1" stop-color="#eef1e6"/>
+    </linearGradient>
+    <linearGradient id="paper2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f6ee"/>
+      <stop offset="1" stop-color="#e2e6d8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#facc15"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22c55e" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stampGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22c55e"/>
+      <stop offset="1" stop-color="#15803d"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" fill="url(#bg)"/>
+
+  <!-- subtle ledger grid -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.5">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+  </g>
+
+  <circle cx="960" cy="150" r="220" fill="url(#glow)"/>
+
+  <!-- stacked invoice papers, right side -->
+  <g transform="translate(760,40)">
+    <g transform="rotate(8 260 150)">
+      <rect x="150" y="70" width="220" height="280" rx="8" fill="url(#paper2)" opacity="0.85"/>
+    </g>
+    <g transform="rotate(-4 260 150)">
+      <rect x="120" y="40" width="230" height="290" rx="8" fill="url(#paper)"/>
+      <line x1="145" y1="90" x2="325" y2="90" stroke="#0f172a" stroke-width="4" opacity="0.7"/>
+      <line x1="145" y1="115" x2="300" y2="115" stroke="#64748b" stroke-width="3" opacity="0.6"/>
+      <line x1="145" y1="135" x2="280" y2="135" stroke="#64748b" stroke-width="3" opacity="0.5"/>
+      <line x1="145" y1="170" x2="330" y2="170" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+      <line x1="145" y1="190" x2="330" y2="190" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+      <line x1="145" y1="210" x2="300" y2="210" stroke="#94a3b8" stroke-width="2" opacity="0.5"/>
+      <line x1="145" y1="230" x2="330" y2="230" stroke="#94a3b8" stroke-width="2" opacity="0.4"/>
+      <line x1="145" y1="270" x2="325" y2="270" stroke="#0f172a" stroke-width="3" opacity="0.4"/>
+      <text x="145" y="300" font-family="'Segoe UI', Arial, sans-serif" font-size="26" fill="#15803d" font-weight="700">$1,240.00</text>
+
+      <!-- approval stamp -->
+      <g transform="translate(255,235) rotate(-18)">
+        <circle r="34" fill="none" stroke="url(#stampGrad)" stroke-width="4"/>
+        <path d="M -14 0 L -4 12 L 16 -12" fill="none" stroke="url(#stampGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- floating currency accents -->
+  <g fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.55">
+    <circle cx="700" cy="90" r="3"/>
+    <circle cx="1120" cy="330" r="4"/>
+    <line x1="60" y1="330" x2="1140" y2="330" stroke-width="1" opacity="0.3"/>
+  </g>
+
+  <!-- headline & tagline -->
+  <g>
+    <rect x="60" y="140" width="6" height="70" fill="url(#accent)"/>
+    <text x="90" y="185" font-family="'Segoe UI', Arial, sans-serif" font-size="72" font-weight="700" fill="#f8fafc" textLength="620" lengthAdjust="spacingAndGlyphs">Invoice Generator</text>
+    <text x="90" y="228" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#94a3b8" textLength="600" lengthAdjust="spacingAndGlyphs">No more manual invoicing — just run and go</text>
+  </g>
+</svg>
